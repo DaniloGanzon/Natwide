@@ -1,0 +1,145 @@
+/* Global reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+.header {
+  background-color: #005b96; /* Dark blue color */
+  color: white;
+  padding: 10px 50px; /* Padding to ensure content isn't too close to the edges */
+  width: 100%; /* Ensures the header occupies the full width of the screen */
+  box-sizing: border-box;
+}
+
+/* Center the content inside header */
+.header-container {
+  width: 100%;
+  max-width: 1200px; /* Optional: To prevent it from stretching too wide on large screens */
+  margin: 0 auto; /* Centers the content horizontally */
+  display: flex;
+  justify-content: space-between; /* Ensure space between elements */
+  align-items: center; /* Vertically center both sections */
+  position: relative;
+  width: 100%;
+}
+
+/* Left section (Welcome message) */
+.header-left {
+  flex: 1; /* Take up available space without pushing the header */
+  display: flex;
+  align-items: center; /* Vertically center the welcome message */
+  justify-content: flex-start; /* Align to the left side */
+}
+
+/* Right section (Contact information) */
+.header-right {
+  display: flex;
+  align-items: center; /* Vertically center contact info */
+  justify-content: flex-end; /* Align contact info to the right */
+}
+
+/* Ensure the "Welcome" text doesn't overflow */
+.header-left p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0; /* Remove margin to prevent extra spacing */
+}
+
+/* Ensuring space between elements in right section */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+
+.contact-item i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 10px 30px; /* Slightly less padding for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .header-left, .header-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px 10px; /* Less padding on very small screens */
+  }
+
+  .header-left p {
+    font-size: 14px; /* Slightly smaller text on very small screens */
+  }
+
+  .contact-item p {
+    font-size: 12px; /* Smaller font size for contact info */
+  }
+
+  .contact-item i {
+    font-size: 16px; /* Smaller icon size for small screens */
+  }
+}
+
+
+/* Custom styles for the navbar logo */
+.navbar-brand img {
+  max-height: 80px; /* Make the logo bigger */
+  padding-left: 20px; /* Add some space to the left of the logo */
+  padding-right: 20px; /* Add some space to the right of the logo */
+}
+
+/* Add spacing between navbar links */
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Increase space between the links */
+  margin-right: 20px;
+}
+
+/* Optional: Adjust the container to ensure it doesn't touch the sides */
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Optional: Add space on the sides of the navbar */
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
